@@ -1,4 +1,4 @@
-import React from "react" 
+import React from "react"
 import "./Post.css"
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt"
 import CommentIcon from "@material-ui/icons/Comment"
@@ -17,7 +17,7 @@ function Post({ name, description, message, photoUrl }) {
         </div>
       </div>
       <div className="post__body">
-        <p>Message goes here</p>
+        <p>{message}</p>
       </div>
       <div className="post__buttons">
         <InputOption Icon={ThumbUpAltIcon} title="Like" color="gray" />

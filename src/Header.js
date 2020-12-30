@@ -22,10 +22,10 @@ function Header() {
             {/* search icon */}
             <SearchIcon />
 
-            <input type="text" />
+            <input type="text" placeholder="Search" />
           </div>
         </div>
-        
+
         <div className="header__right">
           <HeaderOption Icon={HomeIcon} title="Home" />
           <HeaderOption Icon={SupervisorAccountIcon} title="MyNetwork" />
