@@ -9,7 +9,15 @@ import SearchIcon from "@material-ui/icons/Search"
 import HomeIcon from "@material-ui/icons/Home"
 import PersonIcon from "@material-ui/icons/Person"
 import { BusinessCenter } from "@material-ui/icons"
+import { auth } from "./firebase"
+import { login, logout } from "./userSlice"
+import { useDispatch } from "react-redux"
 function Header() {
+  const dispatch = useDispatch()
+  const logoutOfApp = () => {
+    dispatch(logout())
+    auth.signOut()
+  }
   return (
     <div>
       <div className="header">
@@ -32,7 +40,7 @@ function Header() {
           <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
           <HeaderOption Icon={ChatIcon} title="Messaging" />
           <HeaderOption Icon={NotificationsIcon} title="Notification" />
-          <HeaderOption Icon={PersonIcon} title="San" />
+          <HeaderOption Icon={PersonIcon} title="San" onClick={logoutOfApp} />
         </div>
       </div>
     </div>
